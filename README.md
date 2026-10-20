@@ -1,16 +1,96 @@
-# React + Vite
+# Reacta assignment 2: useState() and useEffect()
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+- Due _*22.10.26 by*_ 11:59pm
 
-Currently, two official plugins are available:
+Canvas link - assigment text:
+"https://jobloop.instructure.com/courses/557/assignments/11970"
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+In this task you will make 3 React-components to get practice in using **React Hooks** such as `useState`and `useEffect`. You will handle state, fetch data from API's and build interactive interfaces.
 
-## React Compiler
+The assignment is divided into 3 segments:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **CookieClicker**: Make a button(Cookie) that gives the user point for each click.
+2. **CatFacts**: Fetch and display fact about cats from an API.
+3. **Users**: Display a list of users with the possibility to add new users.
 
-## Expanding the Oxlint configuration
+Solve the assignment task by task and have fun while you code! 😊
+Jump to [CookieClicker](#cookieclicker-component).
+Jump to [CatFacts](#catsfacts-component)
+Jump to [Users](#)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## CookieClicker Component
+
+**Goal**: Create a component where you can click a Cookie(button) to achieve points.
+
+Example of a button:
+
+```<button>
+    <img
+        src="cookie.png"
+        alt="Image of a Cookie"
+    />
+</button>
+```
+
+-- Image of the cookie was here on the page -> can be found in the public folder as cookie.png --
+Tip: cookie.png must be stored in public/.
+
+### Utility:
+
+- When the user click the button(Cookie), they get a point per click.
+- Use `useState` to keep overview of the point collection/score.
+
+### Points display:
+
+- Display the points on the screen, letting the user see how many points they've collected
+
+## CatsFacts-component
+
+**Goal**: Create a component that fetches random CatFacts from an API and displays them on the screen.
+**API**: Use this API to fetch the data: "https://catfact.ninja/facts?limit=5"
+
+### Utility:
+
+1. **Fetch Data**:
+   - Use `useEffect` to fetch data when the components mounts.
+2. **Manage states**:
+   - Use `useState` to manage these three states:
+     - **loading**: Display "Loading..." while data is being fetched.
+     - **error**: Display an error statement if there is an error during the API-query.
+     - **facts**: Display facts about cats after the data is fetched.
+3. **Presentasjon**:
+   - When the data is fetched, display all the Cats Facts on screen.
+   - Use `.map()` to loop through the facts.
+
+## User-component
+
+**Goal**: Create a component that displays a liste of users. Use the `mockData` below as your basis.
+This data set is your foundation:
+
+```const mockData = [
+    { username: 'Ola Normann', email: 'ola.normann@norge.no'},
+    { username: 'Torleif', email: 'torleif@kodehode.no' },
+    { username: 'Jan Egil', email: 'jan.egil@kodehode.no' },
+    { username: 'Sander', email: 'sander@kodehode.no' },
+]
+```
+
+$${\\color{red}Note: \\space You \\space will \\space only \\space manage \\space data \\space stored \\space with \\space and \\space in \\space useState, \\space meaning \\space do \\space not \\space edit \\space or \\space modify \\space the \\space mockData.}$$
+
+### Utility:
+
+1. **Display of users**:
+   - Start by displaying the list of users (from the mockData) on screen.
+2. **Adding new users**:
+   - Create to input fields:
+     - One for **username**.
+     - One for **email**.
+   - Create a button that adds a new user to the list when it is clicked.
+3. **Use of useState**:
+   - Use `useState` to manage the list of users.
+   - When the user adds text in the input fields and click the button, the new user will be added to the list.
+
+**Assessment**:
+
+- Users should be able to add new users by filling the input fields and pressing the button.
+- The new user will then be added and displayed to the list after the button is clicked.
