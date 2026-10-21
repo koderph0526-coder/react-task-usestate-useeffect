@@ -8,12 +8,18 @@ export default function CookieClicker() {
   // PointsCounter;
   return (
     <>
+      {/* As the button tag is from the ex, I will see if I can change the buttons background to avoid a weird design, if not I'd like to change the button to be a figure instead */}
       <button
-        className={styles.cookieImg}
+        style={{ width: "60px", border: "none", borderRadius: "45%" }}
         onClick={() => setCookieCount((prev) => prev + 1)}
       >
-        <img src="/cookie.png" alt="Image of a Coookie" />
+        <img
+          style={{ width: "100%" }}
+          src="/cookie.png"
+          alt="Image of a Coookie"
+        />
       </button>
+      <p>Your Points: {cookiCounter}</p>
     </>
   );
 }
