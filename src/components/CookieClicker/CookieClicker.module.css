@@ -1,1 +1,7 @@
-
+img {
+  width: 100%;
+}
+.cookieImg {
+  margin: 0 auto;
+  width: 40vw;
+}
