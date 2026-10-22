@@ -5,5 +5,13 @@ export default function Users(username, email) {
   const usernameL = mockData.map(username);
   const emailL = mockData.map(email);
   const user = [usernameL, emailL];
-  return user;
+  return (
+    <>
+      <ul>
+        <li>{user}</li>
+      </ul>
+    </>
+  );
 }
+
+// Nope sorry, not a clue yet...
