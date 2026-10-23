@@ -1,15 +1,13 @@
 import { mockData } from "../mockData";
-import { useState, useContext } from "react";
+import { useState, useEffect } from "react";
 
-export default function Users(username, email) {
+export default function UsersCard(username, email) {
   const usernameL = mockData.map(username);
   const emailL = mockData.map(email);
   const user = [usernameL, emailL];
   return (
     <>
-      <ul>
-        <li>{user}</li>
-      </ul>
+      <div></div>
     </>
   );
 }
