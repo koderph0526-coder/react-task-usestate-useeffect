@@ -11,6 +11,7 @@ function App() {
   const [count, setCount] = useState();
   // const [cookiCount, setCookieCount] = useState(0);
   // const pointUp = setCookieCount((prev) => prev + 1);
+  console.log(setCount);
 
   return (
     <>
