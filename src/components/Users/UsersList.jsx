@@ -3,28 +3,52 @@ import { useState, useEffect } from "react";
 // import UserCards from "./UserCard";
 
 export default function UsersCard(username, email) {
-  //Mock data fro the display of pre existing users
-  const mockData = [
-    { username: "Ola Normann", email: "ola.normann@norge.no" },
-    { username: "Torleif", email: "torleif@kodehode.no" },
-    { username: "Jan Egil", email: "jan.egil@kodehode.no" },
-    { username: "Sander", email: "sander@kodehode.no" },
-  ];
+  const [data, setData] = useState(mockData);
+  const [newUserName, setNewUserName] = useState("");
+  const [newUserEmail, setNewUserEmail] = useState("");
+  // Note ctrl + shit + arrow back or forth marks the hold word you want to delete or wrap in brackets
 
-  const usernameL = mockData.map(username);
-  const emailL = mockData.map(email);
-  // const users = mockData.map(username, email);
+  function addUser() {
+    setData((prev) => [
+      ...prev,
+      { username: newUserName, email: newUserEmail },
+    ]);
+    setNewUserName("");
+    setNewUserEmail("");
+  }
+  function onUserSubmit(e) {
+    e.preventDefault();
+    addUser();
+  }
+
   return (
     <>
       <div>
         <h2>Users</h2>
         <ul>
-          {mockData.map((username, email) => (
-            <li key={mockData}>
-              {mockData.username} - <strong>{mockData.email}</strong>
+          {data.map((user, i) => (
+            <li key={i}>
+              {user.username} - <strong>{user.email}</strong>
             </li>
           ))}
         </ul>
+        <form onSubmit={onUserSubmit}>
+          <input
+            value={newUserName}
+            type="text"
+            placeholder="Username"
+            required
+            onChange={(e) => setNewUserName(e.target.value)}
+          />
+          <input
+            value={newUserEmail}
+            type="email"
+            placeholder="Email"
+            required
+            onChange={(e) => setNewUserEmail(e.target.value)}
+          />
+          <button>Lag ny bruker</button>
+        </form>
       </div>
     </>
   );
