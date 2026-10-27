@@ -21,7 +21,7 @@ Jump to [Users](#user-component)
 ## My thoughts and plan:
 
 - Have many questions about parts of this task that needs answers before I know what I need to do, f.ex in CatFacts it first says to fetch a random fact, at the end it says to display them all, am I supposed to do both in a clever way or is this just a typo of some sort?
-- Priority: figure out how to get React to complete the actions I want it to run via functions and components. []
+- Priority: figure out how to get React to complete the actions I want it to run via functions and components. [x] (needed help)
 - Then fix styling, this because everything broke when I attempted to use module css... []
 - Possible solution to my conundrum on catFacts: just do both. Make it display a random catFact when the page loads, wrap the <p> in a button or a div and make it obvious that it can be clicked: when clicked it loads all catFacts available via the API. []
 
