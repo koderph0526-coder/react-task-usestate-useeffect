@@ -48,6 +48,7 @@ export default function CatFactsApi() {
   // console.log(randIndex);
   return (
     <>
+      <h3>Here's some cat facts</h3>
       {/* I'd like the text itself to be the button, when hovered over css will make it clear that it is a button */}
       <button
         onClick={() => setIndex(randIndex)}
