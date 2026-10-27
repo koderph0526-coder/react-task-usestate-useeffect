@@ -2,9 +2,8 @@ import { useState, useContext, useEffect } from "react";
 
 import "./App.css";
 import CookieClicker from "./components/CookieClicker/CookieClicker";
-// import CatFacts from "./components/CatFact/CatFacts";
 import CatFactsApi from "./components/CatFact/CatFacts";
-// import Users from "./components/Users/Users";
+import UsersCard from "./components/Users/UsersList";
 // import styles from "/CookieClicker.module.css";
 
 function App() {
@@ -17,7 +16,7 @@ function App() {
     <>
       <CookieClicker />
       <CatFactsApi />
-      {/* <Users /> */}
+      <UsersCard />
     </>
   );
 }
