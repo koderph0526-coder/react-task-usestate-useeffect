@@ -4,6 +4,7 @@ import styles from "./CookieClicker.module.css";
 
 export default function CookieClicker() {
   const [cookiCounter, setCookieCount] = useState(0);
+
   // const pointUp = setCookieCount((prev) => prev + 1);
   // PointsCounter;
   return (
@@ -16,7 +17,7 @@ export default function CookieClicker() {
       >
         <img
           // style={{ width: "100%" }}
-          src="/cookie.png"
+          src="../cookie.png"
           alt="Image of a Coookie"
         />
       </button>

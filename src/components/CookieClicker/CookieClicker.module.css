@@ -9,6 +9,7 @@ img {
   border: none;
   margin: 0 auto;
   width: 20em;
+  height: 20em;
 }
 
 /* Set the animation to be activated on click only, add a floating number? */
